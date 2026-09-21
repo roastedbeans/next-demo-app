@@ -4,6 +4,8 @@ import { ProjectRows } from "./project-rows";
 import { ProjectStats } from "./project-stats";
 import { RowsSkeleton, StatsSkeleton } from "./skeletons";
 
+export const dynamic = "force-dynamic";
+
 export default function ProjectsPage() {
   return (
     <main className="px-16 py-8">

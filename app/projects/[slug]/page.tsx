@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { fetchProject } from "@/lib/api";
 import { Breadcrumbs } from "@/app/ui/breadcrumbs";
 
+export const dynamic = "force-dynamic";
+
 type Props = { params: Promise<{ slug: string }> };
 
 export default async function ProjectPage({ params }: Props) {
