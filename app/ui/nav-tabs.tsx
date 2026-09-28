@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const TABS = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
+  { href: "/admin", label: "Admin" },
 ];
 
 function isActive(pathname: string, href: string) {
