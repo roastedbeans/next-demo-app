@@ -4,19 +4,16 @@ loadEnvConfig(process.cwd());
 
 async function seed() {
   const { db } = await import("./index");
-  const { projects } = await import("./schema");
+  const { customers } = await import("./schema");
   await db
-    .insert(projects)
+    .insert(customers)
     .values([
-      { slug: "store-ledger", title: "Store Ledger", year: 2025,
-        summary: "Records store credit instead of a paper notebook." },
-      { slug: "org-check-in", title: "Org Check-in", year: 2026,
-        summary: "Scans members in at the door with a QR code." },
-      { slug: "barangay-reports", title: "Barangay Reports", year: 2026,
-        summary: "Lets residents pin a broken streetlight on a map." },
+      { id: "c1", name: "Aling Nena", balance: 340, lastPaid: "Sep 9" },
+      { id: "c2", name: "Mang Tomas", balance: 1250.5, lastPaid: "Aug 30" },
+      { id: "c3", name: "Ate Joy", balance: 0, lastPaid: "Sep 12" },
     ])
     .onConflictDoNothing();
-  console.log("Seeded projects");
+  console.log("Seeded customers");
   process.exit(0);
 }
 

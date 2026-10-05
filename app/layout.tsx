@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Juan dela Cruz",
-  description: "Projects by Juan dela Cruz.",
+  title: "Tindahan Ledger",
+  description: "Store credit for Tindahan ni Rene.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
